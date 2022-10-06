@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@100&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+header{
+    max-width: 1680px;
+    width: 100%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #c4c4c4;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    font-family: 'Saira Condensed', sans-serif;
+}
+header .logo img{
+    width: 250px;
+    margin: 0 60px;
+}
+header .menu ul{
+    display: flex;
+}
+header .menu ul li{
+    list-style: none;
+    padding: 0 30px;
+}
+header .menu ul li a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #bd5b6b;
+}
+header .menu ul li a:hover{
+    color: #f07388;
+    text-decoration: underline;
+}
+
+
+/*  ----------  section  ---------------  */
+section .container{
+    max-width: 1680px;
+    width: 100%;
+    height: 85vh;
+    margin: 0 auto;
+}
+
+
+/*  ----------  home  ----------   */
+#home .container{
+    background: url("https://i.imgur.com/Nx6PI0w.png") no-repeat;
+    background-size: cover;
+}
+#home .container .content{
+    width: 50%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 60px;
+}
+
+#home .container .content h1{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: 10px;
+    margin-top: 200px;
+    margin-bottom: 40px;
+    color: #bd5b6b;
+}
+
+#home .container .content p{
+    font-family: 'Saira Condensed', sans-serif;
+    color: #f07388;
+    font-size: 1.3rem;
+    margin-bottom: 120px;
+    margin-top: 40px; 
+}
+#home .container .content span{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 2.5rem;
+    color: #bd5b6b;
+    letter-spacing: 5px;
+}
+#home .container .content button{
+    padding-top: 200px;
+}
+#home .container .content .button button{
+    font-family: 'Saira Condensed', sans-serif;
+    padding: 10px 20px;
+    border: none;
+    background: #bd5b6b;
+    color: #ffffff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+#home .container .content .button button:hover{
+    transform: scale(1.1);   
+}
+#home .container .content button.btn2{
+    font-family: 'Saira Condensed', sans-serif;
+    background: #c4c4c4;
+    padding: 15px 20px;
+    position: relative;
+}
+
+/*  ---------- BRANCH ----------   */
+
+#branch .container {
+    background: url("https://i.imgur.com/ZJlw8s2.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+#branch .container .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 60px;
+}
+#branch .container .title .line{
+    width: 150px;
+    height: 2px;
+    background-color: #bd5b6b;
+}
+#branch .container .title h1{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    margin-top: 20px;
+}    
+#branch .container .content{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+#branch .container .content .box{
+    width: 25%;
+    height: 60vh;
+    background: #c4c4c4;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+#branch .container .box h3{
+    margin-top: 20px;
+    margin-bottom: 60px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 200;
+    letter-spacing: 8px;
+    background: #bd5b6b;
+    padding: 5px 10px;
+    color: #ffffff;
+    border-radius: 5px;
+}    
+#branch .container .box img{
+    width: 120px;
+}
+#branch .container .box h1{
+    font-size: 2rem;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-top: 20px;
+}
+#branch .container .box p{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 5px;
+    color: #bd5b6b;
+    margin-top: 60px;
+}
+#branch .container .box button{
+    padding: 10px 20px;
+    border: none;
+    background-color:#f07388 ;
+    color: #ffffff;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.2rem;
+    margin-top: 50px;
+    cursor: pointer;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
+#branch .container .box:hover button{
+    transform: translate(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/*  ---------- ABOUT ----------   */
+
+/*#about .container{
+    background: url("https://i.imgur.com/ExfEViy.png") no-repeat;
+    background-size: 100% 100%;
+}
+#about .container .title{
+    width: 70%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 100px;
+}
+#about .container .title .line{
+    width: 250px;
+    height: 2px;
+    background: #bd5b6b;
+}
+#about .container .title h1{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    margin-top: 20px;
+}
+#about .container .title .call{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    left: 200px;
+}    
+#about .container .title .call h2{
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 200;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin-bottom: 80px;
+    letter-spacing: 10px;
+}
+#about .container .title .call p{
+    font-size: 1.3rem;
+    font-family: 'Saira Condensed', sans-serif;
+    letter-spacing: 1px;
+}
+#about .container .title .call button{
+    margin-top: 50px;
+    padding: 10px;
+    border: none;
+    background:#c4c4c4;
+    color: #ffffff;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+#about .container .title .call button:hover{
+    transform: scale(1);
+    border: 2px solid #bd5b6b;
+    background:none;
+    color: #bd5b6b;
+    font-weight: 600;
+}*/
+
+/*  ---------- PROCUCTS ----------   */
+
+#products .container{
+    background: url("https://i.imgur.com/ZJlw8s2.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+#products .container .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#products .container .title .line{
+    width: 150px;
+    height: 2px;
+    background: #bd5b6b;
+}
+
+#products .container .title h1{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    margin-top: 20px;
+}
+#products .container .card{
+    width: 60%;
+    height: 80vh;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#products .container .card .box{
+    width: 100%;
+    height: 45vh;
+    background: #c4c4c4;
+    box-shadow: 0 0 8px #000000;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#products .container .card .box .icon{
+    width: 50px;
+    height: 60px;
+    background: #c4c4c4;
+    text-align: center;
+    line-height: 80px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+#products .container .card .box .icon ion-icon{
+    color: #bd5b6b;
+    font-size: 1.6rem;
+}
+#products .container .card .box img{
+    width: 100px;
+    margin-top: 35px;
+}
+#products .container .card .box h1{
+    margin-top: 30px;
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+
+#products .container .card .box p{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: #bd5b6b;
+    margin-top: 15px;
+}
+
+.owl-dot{
+    width: 15px;
+    height: 15px;
+    outline: none !important;
+    border-radius: 50%;
+    border: 3px solid #bd5b6b !important;
+}
+.owl-dot.active{
+    width: 45px;
+    border-radius: 15px;
+}
+
+/*  ---------- TEAM ----------   */
+
+/*#team .container{
+    background: url("https://i.imgur.com/ZJlw8s2.jpg");
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 50px;
+}
+#team .container .content{
+    width: 40%;
+    height: 40vh;
+}
+#team .container .content p{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+#team .container .content h2{
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+#team .container .content .cards{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#team .container .content .image img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #000000;
+}
+#team .container .content .title h1{
+    font-family: 'Saira Condensed', sans-serif;
+    font-weight: 300;
+    letter-spacing: 5px;
+}
+#team .container .content .title p{
+    font-family: 'Saira Condensed', sans-serif;
+    margin-top: 10px;
+}*/
+
+/*  ---------- news ----------   */
+#news .container{
+    background: url("https://i.imgur.com/ZJlw8s2.jpg");
+    background-size: 100% 100%;
+}
+#news .container .title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#news .container .title .line{
+    width: 150px;
+    height: 2px;
+    background: #bd5b6b;
+}
+#news .container .title h1{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 2rem;
+    font-weight: 200;
+    text-transform: uppercase;
+    letter-spacing: 15px;
+    margin-top: 20px;
+}
+#news .container .content{
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: space-evenly;
+}
+#news .container .content .box{
+    width: 20%;
+    height: 40vh;
+    background: #c4c4c4;
+    box-shadow: 0 0 15px #000000;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 120px;
+    transition: all 0.3s ease;
+}
+#news .container .content .box:hover{
+    background: #c4c4c4;
+    height: 60vh;
+}
+#news .container .content .box h3{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 5px;
+    margin-top: 50px;
+    margin-bottom: 30px;
+    background: #bd5b6b;
+    padding: 5px 20px;
+    color: #ffffff;
+}
+#news .container .content .box img{
+    width: 150px;
+}
+#news .container .content .box h1{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 200;
+    letter-spacing: 5px;
+    margin-top: 20px;
+    color: #bd5b6b;
+}
+
+#news .container .content .box p{
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #bd5b6b;
+    letter-spacing: 5px;
+    margin-top: 20px;
+}    
+#news .container .content .box button{
+    padding: 10px 20px;
+    border: none;
+    background: #bd5b6b;
+    color: #ffffff;
+    font-family: 'Saira Condensed', sans-serif;
+    font-size: 1.2rem;
+    margin-top: 50px;
+    transform: translateY(-40px);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s ease; 
+    cursor: pointer;
+}
+#news .container .content .box:hover button{
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
