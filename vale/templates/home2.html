@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style2.css' %}">
 
 </head>
 <body>
@@ -31,20 +31,18 @@
         <a href="#home">Inicio</a>
         <a href="#about">Sobre nós</a>
         <a href="#products">Serviços</a>
-        <a href="#review">Feedback</a>
         <a href="#contact">comentário</a>
-        <a href="/cadastro">Cadastro</a>
-        <a href="./login">Login</a>
+        <a href="/agendamento/">Agendamento</a>
     </nav>
 
-    <div class="icons"> 
+    <div class="icons">
         <a href="#" class="fas fa-user" onclick="toggleMenu()"></a>
         <div class="sub-menu-wrap" id="subMenu">
             <div class="sub-menu">
                 <div class="user-info">
                     <img src="https://i.imgur.com/eFLb3pi.png" >
                     <p>Usuario: </p>
-                    <h3>{{perfil.usuario}}</h3>
+                    <h3>{{uid.usuario}}</h3>
                 </div>
 
                 <a href="#" class="sub-menu-link">
@@ -81,8 +79,8 @@
 
     <div class="content">
         <h3>Vintage Cuts</h3>
-        <span> </span>
-        <p> O salão Vintage cuts, oferece serviços de alta qualidade, com uma grande diversidade de procedimentos, como cortes, tinturas, progressivas, além de manicure e pedicure. Nosso site vem com a proposta de facilitar o seu atendimento sem precisar vir ao estabelecimento antes do dia do atendimento.</p>
+        <span>  </span>
+        <p>O salão Vintage cuts, oferece serviços de alta qualidade, com uma grande diversidade de procedimentos, como cortes, tinturas, progressivas, além de manicure e pedicure. Nosso site vem com a proposta de facilitar o seu atendimento sem precisar vir ao estabelecimento antes do dia do atendimento.</p>
         <a href="#about" class="btn">saiba mais</a>
     </div>
     
@@ -105,7 +103,6 @@
         <div class="content">
             <h3>Nossa história</h3>
             <p>Criado em 2022 por uma equipe de 2 jovens estagiários, após um encontro de objetivos complementares para administrar uma empresa e trabalhar auxiliando a vida de mulheres. A empresa foi criada com o intuito de  contribuir com a boa autoestima de mulheres que presam por sua aparência..</p>
-            <a href="https://instagram.com/vintagecutts?igshid=YmMyMTA2M2Y=" class="btn">Consulte nosso insta</a>
         </div>
 
     </div>
@@ -140,6 +137,7 @@
         <div class="info">
             <h3>Pagamentos seguros</h3>
             <span>Aceitamos todos os cartões</span>
+            
         </div>
     </div>
     <div class="icons">
@@ -315,88 +313,7 @@
 
 <!-- review section starts  -->
 
-<section class="review" id="review">
 
-<h1 class="heading"> Feedback <span></span> </h1>
-
-<div class="box-container">
-
-    <div class="box">
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <p>Bom dia!
-            Gostaria de dar um feedback da
-            experiência que tive com vocês.
-            Conheci a loja pelo Instagram e
-            fiquei super curioso para saber se
-            seria uma experiência agradável
-            e adorei!
-            Atendimento excelente, site
-            funcional e prático e com
-            preços justos, fácil de pagar,...
-            Resumindo, adorei a experiência com
-            certeza vocês ganharam um
-            cliente! Muito obrigado!</p>
-        <div class="user">
-            <img src="images/Kit-Harington-Game-of-Thrones-1200x900-1.png" alt="">
-            <div class="user-info">
-                <h3>Leticia Cavalcante</h3>
-                <span>cliente</span>
-            </div>
-        </div>
-        <span class="fas fa-quote-right"></span>
-    </div>
-
-    <div class="box">
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <p>Não tenho palavras para descrever o quanto estou satisfeita com vcs! Desde o primeiro atendimento até o dia da progressiva. Realmente vcs estão de parabéns! Equipe maravilhosa, tudo muito lindo e meus familiares ficaram encantados.
-        Obrigado mesmo pelo carinho...</p>
-        <p></p>
-        <div class="user">
-            <img src="images/DanyS8E6.png" alt="">
-            <div class="user-info">
-                <h3>Daenerys Targaryen</h3>
-                <span>cliente</span>
-            </div>
-        </div>
-        <span class="fas fa-quote-right"></span>
-    </div>
-
-    <div class="box">
-        <div class="stars">
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-            <i class="fas fa-star"></i>
-        </div>
-        <p>Pessoal, os cabelos ficaram ótimos, como sempre, além claro da agilidade e atenção com que vocês nos atendem. </p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <p></p>
-        <div class="user">
-            <img src="images/alx_guerra-dos-tronos-sexta-20160211-024_original-e1539650842412.png" alt="">
-            <div class="user-info">
-                <h3>Rita Lee</h3>
-                <span>cliente</span>
-            </div>
-        </div>
-        <span class="fas fa-quote-right"></span>
-    </div>
-
-</div>
     
 </section>
 
@@ -465,7 +382,7 @@
 
 
 
-<script src="{% static 'home.js' %}"></script>
+<script src="{% static 'home2.js' %}"></script>
   
 </body>
 </html>

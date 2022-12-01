@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Agendamento</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/agendamento.css' %}" />
+	</head>
+	<body>
+		<section id="pag-agendamentos">
+			<h1>Agendamento</h1>
+
+			<p>Agende seu serviço</p>
+			
+			<form name="" method="" action="">
+				<label id="labelNome" for="nome">Nome</label>
+				<input id="nome" type="text" name="nome" placeholder="Digite seu nome completo" required /><br/>
+
+
+				<label id="LabelCelular" for="celular">Celular</label>
+				<input id="celular" type="tel" name="celular" placeholder="(99)99999-9999"maxLength="11" pattern="^\(?\d{2}\)\d{5}[-\s]\d{4}.*?$" >
+
+				<div id="data-hora-num">
+					<div>
+						<label for="data">Data:</label>
+						<input id="data" type="date" name="data" />
+					</div>
+					<div>
+						<label for="hora">Hora:</label>
+						<input id="hora" type="time" name="hora" />
+					</div>
+					<div>
+						<label for="aulas">---:</label>
+						<input id="aulas" type="number" name="aulas" min="1" max="10" step="1" />
+					</div>
+				</div>
+
+				<label for="nivel">Nível:</label>
+				<select id="nivel" name="nivel">
+					<option value="">Selecione</option>
+					<option value="iniciante">----</option>
+					<option value="basico">---</option>
+					<option value="intermediario">---</option>
+					<option value="avancado">---</option>
+				</select><br/>
+
+		
+				<fieldset>
+					<legend>Serviços:</legend>
+					<input id="aplique" type="checkbox" name="serviços" value="aplique" /> <label for="aplique">Aplique: R$314,99 </label><br/>
+					<input id="escova" type="checkbox" name="serviços" value="escova" /> <label for="escova">Escova: R$67,99</label><br/>
+					<input id="progressiva" type="checkbox" name="serviços" value="progressiva" /> <label for="progressiva">Progressiva: R$237,49</label><br/>
+					<input id="corte" type="checkbox" name="serviços" value="corte" /> <label for="corte">Corte: R$39,99</label><br/>
+                    <input id="tintura" type="checkbox" name="serviços" value="tintura" /> <label for="tintura">Tintura: R$161,99</label><br/>
+					<input id="ruivo" type="checkbox" name="serviços" value="ruivo" /> <label for="ruivo">Ruivo: R$109,99</label><br/>
+					<input id="loiro" type="checkbox" name="serviços" value="loiro" /> <label for="loiro">Loiro: R$173,99</label><br/>
+					<input id="manicure" type="checkbox" name="serviços" value="manicure" /> <label for="manicure">Manicure: R$17,99</label><br/>
+					<input id="pedicure" type="checkbox" name="serviços" value="pedicure" /> <label for="pedicures">Pedicure: R$17,79</label><br/>
+
+				</fieldset>
+
+				<label for="msg">Mensagem:</label><br/>
+				<textarea id="msg" cols="48" rows="4">
+				</textarea>
+
+				<div id="botoes-form">
+					<input type="submit" name="bnt-agendar" value="AGENDAR" />
+					<input type="reset" name="btn-cancelar" value="CANCELAR" />
+				</div>
+			</form>
+		</section>
+	
+		<script src="{% static 'agendamento.js' %}"></script>
+	</body>
+</html>

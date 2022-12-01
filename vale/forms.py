@@ -1,6 +1,6 @@
 from django.forms import ModelForm
 from django import forms 
-from vale.models import Usuario 
+from vale.models import Usuario, Comentario
 
 
 class UsersForm(ModelForm):
@@ -8,4 +8,15 @@ class UsersForm(ModelForm):
     class Meta:
         model = Usuario
         widgets = {'password': forms.PasswordInput(),}
-        fields = ['usuario', 'senha', 'nome', 'ultimo_nome']
+        fields = ['usuario', 'senha', 'nome', 'sobrenome','celular', 'cpf',]
+
+class LoginForm(ModelForm):
+    class Meta:
+        model = Usuario
+        widgets = {'password': forms.PasswordInput(),}
+        fields = ['usuario', 'senha']
+
+class ComentariosForm(ModelForm):
+    class Meta:
+        model = Comentario
+        fields = ['comentario']
