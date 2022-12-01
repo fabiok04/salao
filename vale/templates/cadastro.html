@@ -1,45 +1,81 @@
-        <!DOCTYPE html>
-        <html lang="pt-br">
-        <head>
-            <meta charset="UTF-8">
-            <meta http-equiv="X-UA-Compatible" content="IE=edge">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Cadastrar</title>
-            <link rel="stylesheet" href="static/css/cadastro.css">
-        </head>
-        <body>
-            <main>
-                <h1>Cadastrar</h1>
-                {% block body %}
-                <form name="cad_user" method="post" action ="docad/">
-                {% csrf_token %}
-                    <label for="name">
-                        <span>Nome</span>
-                        {{form.nome}}
-                    </label>
-        
-                    <label for="email">
-                        <span>Sobrenome</span>
-                        {{form.ultimo_nome}}
-                    </label>
-        
-                    <label for="user">
-                        <span>Usuário</span>
-                        {{form.usuario}}
-                    </label>
-        
-                    <label for="password">
-                        <span>Senha</span>
-                        {{form.senha}}
-                    </label>
-                    
-                    <input type="submit" class="btn btn-success" value="Salvar">
-                </form>
-                {% endblock %}
-            </main>
-            <section class="images">
-                <img src="static/css/Images/mobile.svg" alt="Mobile">
-                <div class="circle"></div>
-            </section>
-        </body>
-        </html>
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}">
+
+<head>
+
+    </head>
+    
+    <body>
+    
+      <div class='container'>
+         <div class='card'>
+           <h1> Cadastrar </h1>
+           {% block body %}
+        <form name="cad_user" method="post" action ="/docad/">
+        {% csrf_token %}
+           <div id='msgError'></div>
+           <div id='msgSuccess'></div>
+           
+                   <div class="label-float">
+                      <input type="text" id="nome" {{form.nome}}
+                     <label id="labelNome" for="nome">Nome</label>
+                     </div>
+      
+                     <div class="label-float">
+                        <input type="text" id="sobrenome" {{form.sobrenome}}
+                       <label id="labelSobrenome" for="sobrenome">Sobrenome</label>
+                       </div>
+
+                     <div class="label-float">
+                      <input type="text" id="usuario" {{form.usuario}}
+                      <label id="labelUsuario" for="usuario">Usuário</label>
+                   </div>
+                   <div class="label-float">
+                     <input type="celular" id="celular"maxLength="11"
+                     {{form.celular}}
+                     <label id="labelCelular" for="celular">Celular</label>
+                  </div>
+
+                  <div class="label-float">
+                     <input type="number" id="cpf" maxLength="11"
+                     {{form.cpf}}
+                     <label id="labelCpf" for="cpf">CPF</label>
+                  </div>
+                   
+                   <div class="label-float">
+                      <input type="password" id="senha" {{form.senha}}
+                      <label id="labelSenha" for="senha">Senha</label>
+                      <i id="verSenha" class="fa fa-eye" aria-hidden="true"></i>
+                      
+                   </div>
+       
+                   <div class="label-float">
+                      <input type="password" id="confirmSenha" {{form.confirma_senha}} required>
+                      <label id="labelConfirmSenha" for="confirmSenha">Confirmar Senha</label>
+                      <i id="verConfirmSenha" class="fa fa-eye" aria-hidden="true"></i>
+                   </div>
+
+                   <p> Já tem conta?
+                     <a href="/login/">Entre</a>
+                   </p>
+                   
+                   <div class='justify-center'>
+                      <button onclick="/docad/">Cadastrar</button>
+                   </div>
+       
+           
+         </div>
+         </div>
+         {% endblock %}
+
+<script src="{% static 'cadastro.js' %}"></script>
+
+    </body>
